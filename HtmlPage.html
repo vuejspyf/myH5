@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery.min.js">
+        
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle("3000");
+            })
+        })
+
+    </script>
+ 
+</head>
+<body>
+    <p>表演带有不同参数的fadeIn（）方法</p>
+ <button>点击这里三个矩形淡入</button>
+    <br /><br/>
+    <div id="div1" style="width:80px;height:80px;display:block;background-color:red"></div>
+    <br/>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:green"></div>
+    <div id="div3" style="width:80px;height:80px;display:block;background-color:yellow"></div>
+</body>
+</html>
