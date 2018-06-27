@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script>
+    window.onload=function(){
+        var aA=document.getElementsByTagName('a');
+        var oUl=document.getElementById('ul1');
+        for(var i=0;i<aA.length;i++){
+            aA[i].onclick=function(){
+            oUl.removeChild(this.parentNode);
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+            <li>dsadas<a href="javascript:;">删除</li>
+        <li>d12121s<a href="javascript:;">删除</li>
+            <li>ds1212<a href="javascript:;">删除</li>
+                <li>d12121s<a href="javascript:;">删除</li>
+    </ul>
+</body>
+</html>

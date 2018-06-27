@@ -3,16 +3,49 @@
 <head>
     <meta charset="utf-8" />
     <title>Page Title</title>
-    <script src="./jquery.min (2).js"></script>
-   <script>$(document).ready(function(){
-       $("p").click(function(){
-           $(this).hide();
-       })
-   })
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('div1');
+            var aBtn=oDiv.getElementsByTagName('input');
+            var aDiv=oDiv.getElementsByTagName('div');
+            for(var i=0;i<aBtn.length;i++){
 
-       </script>
+                aBtn[i].onclick=function(){
+                   
+                    for(i=0;i<aBtn.length;i++){
+                        aBtn[i].className='';
+                        aDiv.style.display='none';
+                    }
+                    this.className='action'
+                };
+            }
+        };
+
+    </script>
+    <style>
+    #div1.action{background: yellow;}
+#div1 div{
+width: 200px;
+background: #CCC;
+border:1px solid #999;
+display: none;
+
+
+}    
+    </style>
+ 
 </head>
-<body>
-    <p>If you click on me, i Will disappear.</p>
+<body><div id="div1">
+<input  class="action"type="button" value="教育">
+<input type="button" value="培训">
+<input type="button" value="招生">
+<input type="button" value="出国">
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+</div>
+
+    
 </body>
 </html>

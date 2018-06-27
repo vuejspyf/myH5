@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    #div1{width: 800;height: 200px;margin: 100px auto;
+    position: relative;background: red;overflow:hidden}
+    #div1 ul{position: absolute;left:0;top: 0;}
+    #div1 ul li{
+        float: left;
+        width: 200px;
+        height: 200px;
+        list-style: none;
+    }
+    </style>
+    <script>
+    window.onload=function(){
+        var oDiv=document.getElementById('div1');
+        var oUl=oDiv.getElementsByTagName('ul')[0];
+        var aLi=oUl.getElementsByTagName('li');
+        var timer=null;
+        var speed=2;
+        oUl.innerHTML=oUl.innerHTML+oUl.innerHTML;
+        oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
+        timer=setInterval(function (){
+            if(oUl.offsetLeft<-oUl.offsetWidth/2){
+                oUl.style.left='0';
+            }
+            if(oUl.offsetLeft>0){
+                oUl.style.left=-oUl.offsetWidth/2+'px';
+            }
+            oUl.style.left=oUl.offsetLeft+speed+'px';
+        },30);
+        oDiv.onmousemove=function(){
+            clearInterval(timer);
+        }
+        oDiv.onmouseout=function(){
+            timer=setInterval(function (){
+            if(oUl.offsetLeft<-oUl.offsetWidth/2){
+                oUl.style.left='0';
+            }
+            if(oUl.offsetLeft>0){
+                oUl.style.left=-oUl.offsetWidth/2+'px';
+            }
+            oUl.style.left=oUl.offsetLeft+2+'px';
+        },30);
+        }
+        document.getElementsByTagName('a')[0].onclick=function(){
+            speed=-2;
+        }
+        document.getElementsByTagName('a')[1].onclick=function(){
+            speed=2;
+        }
+    }
+    </script>
+</head>
+<body>
+    <a href="javascript:;">向左走</a>
+    <a href="javascript:;">向左右</a>
+    <div id="div1">
+    <ul>
+        <li><img src="./1.jpg"></li>
+        <li><img src="./2.jpg"></li>
+        <li><img src="./3.jpg"></li>
+        <li><img src="./4.jpg"></li>
+    </ul>
+</div>
+</body>
+</html>

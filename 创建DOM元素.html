@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+   <script>
+   window.onload=function(){
+       var oBtn=document.getElementById('btn1');
+       var oUl=document.getElementById('ul1');
+       var oTxt=document.getElementById('txt1');
+
+       oBtn.onclick=function(){
+           
+           var oLi=document.createElement('li');
+           var aLi=oUl.getElementsByTagName('li');
+           oUl.appendChild(oLi);//顺序很重要
+           oLi.innerHTML=oTxt.value;
+           //父级添加子节点
+           //oUl.insertBefore(oLi,aLi[0]);
+       }
+   }
+   </script>
+</head>
+<body>
+    <input id="txt1"type="text">
+    <input type="button"value="创建li"id="btn1">
+    <ul id="ul1">
+
+    </ul>
+</body>
+</html>

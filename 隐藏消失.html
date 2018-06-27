@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="./jquery.min.js"></script>
+ <script>
+ $(document).ready(function(){
+     $("#hide").click(function(){
+         $("p").hide();
+     });
+$("#show").click(function(){
+    $("p").show();
+});
+
+ });
+ 
+ </script>
+</head>
+<body>
+    <P id="P1">如果点击 影藏按钮 我就会消失</P>
+    <button id="hide"type="button">隐藏</button>
+    <button id="show"type="button">显示</button>
+    
+</body>
+</html>
