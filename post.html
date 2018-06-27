@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+ <script src="./jquery.min.js"></script>
+</head>
+<body>
+    <label >请输入数字1：</label>
+    <input type="number"id="num1">
+</br>
+<label>请输入数字2：</label>
+<input type="number" id="num2">
+<br>
+<button id="xxx">点击我请求后台数据</button>
+<script>
+$("#xxx").click(function(){
+    $.ajax({
+        type:"post",
+        url:"file:///C:/Users/Administrator/Desktop/jqurey%E7%BB%83%E4%B9%A0/post.html",
+        data:{
+            num1:$("#num1").val(),
+            num2:$("#num2").val()
+        },
+        dataType:"text",//数据格式
+        success:function(){
+            console.log(data)
+        },
+        error:function(jqObj){
+            console.log(jqObj);
+        }
+    })
+})
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="./jquery.min (2).js"></script>
+    <script>/*
+    $(document).ready(function(){
+
+        $("button").click(function(){
+$("p").hide();
+
+
+        })
+    })*/
+
+    /*$(document).ready(function(){
+        $("p").css("background-color","red");
+
+        $("button").click(function(){
+            $(".test").hide();
+
+        })
+    })*/
+    /*$(document).ready(function(){
+$("button").bind({
+    click:function(){$("p").slideToggle();},
+    mouseover:function(){$("body").css("background-color","red");},
+    mouseout:function(){$("body").css("backgroud-color","#FFFFFF");},
+})
+
+    })*/
+    $(document).ready(function(){/*
+$("button").bind("click",function(){
+
+    $("p").slideToggle();
+})*/$("button").mousedown(function(){
+    $("p").slideToggle();
+})
+
+    })
+    </script>
+  
+</head>
+<body><h2 class="test">this is a heading</h2>
+    <p>this is a paragraph</p>
+    <p>this is a another paragraph</p>
+    <button type="button">click me</button>
+    
+</body>
+</html>

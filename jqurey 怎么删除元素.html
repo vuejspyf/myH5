@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="./jquery.min (2).js"></script>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("p")./*removeempty*/remove(".xxxx");
+        });
+    }); </script>
+
+</head>
+<body>
+    <div id="div1" style="height: 100px;width:300px;border:1px solid black;background-color:yellow;">this is some text in the div.
+    <p class="xxxx">this is a paragraph in the div, </p>
+    <p class="xxxx">this is a another paragraph in the div.</p></div>
+    <br>
+    <button>删除 div元素</button>
+</body>
+</html>

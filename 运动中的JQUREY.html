@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="./jquery.min (2).js"></script>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            /*$("#div1").animate({left:'500px',
+            opacity:'0.5',
+            height:'150px',
+            width:'150px'
+//height:'toggle'
+
+
+
+            })*/
+/*var div=$("div");
+div.animate({height:'300px',opacity:'0.4'},"solw");
+div.animate({width:'300px',opacity:'0.8'},"slow");
+div.animate({width:'100px',opacity:'0.4'},"slow");
+div.animate({height:'100px',opacity:'0.4'},"slow");
+*/var div=$("#div1");
+div.animate({left:'100px'},"slow");
+div.animate({fontSize:'3em'
+},"slow");
+        })//排队执行
+    })
+    
+    
+    
+    </script>
+    
+</head>
+<body>
+    <button>开始动画</button>
+    <p>默认情况下所有的html元素都是静态的，并且无法移动。如果需要对未知进行操作记得首先吧元素的css
+        position设置为relative，或者absolute。
+    </p>
+    <div id="div1"style="background:#98bf21;height:100px;width:100px;position:absolute;">jqurey</div>
+</body>
+</html>

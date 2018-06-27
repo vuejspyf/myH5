@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script>
+    window.onload=function(){
+var oBtn=document.getElementById('btn1');
+oBtn.onclick=function(){
+
+    if(window.XMLHttpRequest){
+    var oAjax=new XMLHttpRequest();
+    }else{
+        var oAjax=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+//alert(oAjax);
+oAjax.open('GET','a11.txt',true);//连接服务器
+oAjax.send();//发送请求
+oAjax.onreadystatechange=function(){//接受返回
+    if(oAjax.readyState==4){//已经完成任务
+        if(oAjax.status==200){//这个函数判断师傅成功
+alert('成功');
+        }
+        else{
+            alert('失败');
+        }
+    }
+    //0，（初始化 什么都没发生 1 以调用send 正在发送2载入完成已经收到响应内容3正在解释4正在解释
+}
+}
+    };
+    </script>
+ 
+</head>
+<body>
+    <input id="btn1" type="button"value="读取"/>
+</body>
+</html>

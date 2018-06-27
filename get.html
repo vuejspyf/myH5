@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="./jquery.min.js"></script>
+</head>
+<body>
+    <button id="result">点击我来请求后天数据</button>
+    <script>
+    $("#result").click(function(){
+        $.ajax({
+            type:"get",
+            url:"http://192.168.1.101:8080/MineTest/first.do",
+            success:function(data){
+                console.log(data)
+            },
+            error:function(jqObj){
+                console.log(oqObj.status)
+            }
+                
+      
+                
+            
+        })
+    })
+    </script>
+    
+</body>
+</html>

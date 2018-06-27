@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>123</title>
+<script src="./jquery.min (2).js"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("p").prepend/*append*/("<b>我爱你</b>.");
+        });
+        $("#btn2").click(function(){
+
+            $("ol").prepend/*append*/("<li>我爱你</li>");
+        });
+    });
+</script>
+</head>
+<body>
+    <P>This is a paragraph.</P>
+    <p>this is a another paragraph</p>
+    <ol>
+<li>List item 1</li>
+<li>List item 2</li>
+<li>List item 3</li>
+    </ol>
+    <button id="btn1">追加文本</button>
+    <button id="btn2">追加列表项</button>
+    
+</body>
+</html>

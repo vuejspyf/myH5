@@ -1,0 +1,28 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="./jquery.min (2).js"></script>
+    <script>
+    $(document).ready(function(){
+
+        $("button").click(function(){
+            var txt="";
+            txt+="Width of div:"+$("#div1").width()+"</br>";
+            txt+="Height of div:"+$("#div1").height();
+            $("div1").html(txt);
+        })
+    })
+    
+    </script>
+
+</head>
+<body>
+    <div id="div1" style="height:100px;width:300px;padding:10px;margin:3px;border:1px solid blue;background-color:lightblue;"></div>
+<br>
+<button>显示div size</button>
+<p>width()-返回元素宽度</p>
+<p>height()-返回元素高度</p>    
+</body>
+</html>

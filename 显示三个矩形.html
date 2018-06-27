@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <style>
+    #div1{
+        width: 200px;
+        height: 200px;
+        background: red;
+       display: none;
+    }
+    #div2{
+        width: 200px;
+        height: 200px;
+        background: rgb(0, 255, 55);
+ display: none;
+    }
+    #div3{
+        width: 200px;
+        height: 200px;
+        background: rgb(89, 0, 255);
+       display: none;
+    }
+    
+    </style>
+    <script src="./jquery.min (2).js"></script>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+$("#div1").css('display','block');
+$("#div2").css('display','block');
+$("#div3").css('display','block');
+/*$("#div1").fadeTo("slow",0.15);
+$("#div2").fadeTo("slow",0.4);
+$("#div3").fadeTo("slow",0.7);
+  */      })
+
+//fadeout 淡出 fadein 淡入；
+    })
+    
+    </script>
+ 
+</head>
+<body>
+    <button type="button">点击我就会显示三个正方形</button>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    
+</body>
+</html>

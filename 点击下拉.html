@@ -1,0 +1,38 @@
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="./jquery.min (2).js"></script>
+  <style>
+  div.panel,p.flip{
+margin: 0px;
+padding: 5px;
+text-align: center;
+background: #e5eecc;
+  }
+  div.panel{
+     
+      height: 120px;
+      display: block;
+  }
+  </style>  
+  <script>
+  $(document).ready(function(){
+$(".flip").click(function(){
+    $(".panel").slideToggle("slow");
+})
+
+  })
+  
+  </script>
+  
+</head>
+<body>
+    
+</body>
+<div class="panel">
+    <p>w3school- 领先web技术教程站点</p>
+    <p>在w3school.你可以找到你所需要的万丈假设教程</p>
+</div>
+<p class="flip">请点击这里</p>
+</html>
